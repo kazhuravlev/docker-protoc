@@ -1,0 +1,11 @@
+version: '3'
+
+silent: false
+
+vars:
+  PROTOC_IMAGE: "kazhuravlev/docker-protoc:latest"
+
+tasks:
+  build:docker:
+    cmds:
+      - docker buildx build --platform linux/amd64 -t {{ .PROTOC_IMAGE }} .
