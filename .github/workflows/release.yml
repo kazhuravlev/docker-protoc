@@ -28,4 +28,6 @@ jobs:
           context: .
           platforms: linux/amd64,linux/arm64
           push: true
-          tags: kazhuravlev/docker-protoc:latest
+          tags:
+            - kazhuravlev/docker-protoc:${{ env.GITHUB_HEAD_REF }}
+            - kazhuravlev/docker-protoc:latest
