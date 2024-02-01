@@ -6,7 +6,8 @@ on:
       - '*'
 
 jobs:
-  goreleaser:
+  publish-docker-image:
+    name: Build and push Docker image.
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
